@@ -1,0 +1,65 @@
+#include <stdio.h>
+
+int main() {
+    // ===============================
+    // DECLARAÇÃO DE VARIÁVEIS
+    // ===============================
+    int casas_torre = 5;   // Torre move 5 casas
+    int casas_bispo = 5;   // Bispo move 5 casas
+    int casas_rainha = 8;  // Rainha move 8 casas
+
+    // ===============================
+    // MOVIMENTO DA TORRE
+    // ===============================
+    // A torre move-se em linha reta: horizontalmente ou verticalmente.
+    // Aqui, usaremos um laço FOR para mover a torre 5 casas para a direita.
+    printf("=== MOVIMENTO DA TORRE ===\n");
+    printf("A torre se moverá %d casas para a direita:\n", casas_torre);
+
+    for (int i = 1; i <= casas_torre; i++) {
+        printf("Casa %d: Direita\n", i);
+    }
+
+    printf("\n");
+
+    // ===============================
+    // MOVIMENTO DO BISPO
+    // ===============================
+    // O bispo move-se nas diagonais. Aqui ele se moverá 5 casas
+    // na diagonal superior direita ("Cima e Direita").
+    // Usaremos um laço WHILE.
+    printf("=== MOVIMENTO DO BISPO ===\n");
+    printf("O bispo se moverá %d casas na diagonal (Cima e Direita):\n", casas_bispo);
+
+    int contador_bispo = 1;
+    while (contador_bispo <= casas_bispo) {
+        printf("Casa %d: Cima e Direita\n", contador_bispo);
+        contador_bispo++;
+    }
+
+    printf("\n");
+
+    // ===============================
+    // MOVIMENTO DA RAINHA
+    // ===============================
+    // A rainha move-se em todas as direções.
+    // Aqui, ela se moverá 8 casas para a esquerda.
+    // Usaremos um laço DO-WHILE.
+    printf("=== MOVIMENTO DA RAINHA ===\n");
+    printf("A rainha se moverá %d casas para a esquerda:\n", casas_rainha);
+
+    int contador_rainha = 1;
+    do {
+        printf("Casa %d: Esquerda\n", contador_rainha);
+        contador_rainha++;
+    } while (contador_rainha <= casas_rainha);
+
+    printf("\n");
+
+    // ===============================
+    // FIM DO PROGRAMA
+    // ===============================
+    printf("Movimentação concluída com sucesso!\n");
+
+    return 0;
+}
