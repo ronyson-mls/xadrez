@@ -1,0 +1,61 @@
+#include <stdio.h>
+
+int main() {
+    // ===============================
+    // DECLARAÇÃO DE VARIÁVEIS
+    // ===============================
+    int casas_torre = 5;    // Torre: 5 casas para a direita
+    int casas_bispo = 5;    // Bispo: 5 casas na diagonal superior direita
+    int casas_rainha = 8;   // Rainha: 8 casas para a esquerda
+    int mov_vertical_cavalo = 2;  // Cavalo: 2 casas para baixo
+    int mov_horizontal_cavalo = 1; // Cavalo: 1 casa para a esquerda
+
+    // ===============================
+    // MOVIMENTO DA TORRE (for)
+    // ===============================
+    printf("=== MOVIMENTO DA TORRE ===\n");
+    printf("A torre se moverá %d casas para a direita:\n", casas_torre);
+
+    for (int i = 1; i <= casas_torre; i++) {
+        printf("Casa %d: Direita\n", i);
+    }
+
+    printf("\n");
+
+    // ===============================
+    // MOVIMENTO DO BISPO (while)
+    // ===============================
+    printf("=== MOVIMENTO DO BISPO ===\n");
+    printf("O bispo se moverá %d casas na diagonal (Cima e Direita):\n", casas_bispo);
+
+    int contador_bispo = 1;
+    while (contador_bispo <= casas_bispo) {
+        printf("Casa %d: Cima e Direita\n", contador_bispo);
+        contador_bispo++;
+    }
+
+    printf("\n");
+
+    // ===============================
+    // MOVIMENTO DA RAINHA (do-while)
+    // ===============================
+    printf("=== MOVIMENTO DA RAINHA ===\n");
+    printf("A rainha se moverá %d casas para a esquerda:\n", casas_rainha);
+
+    int contador_rainha = 1;
+    do {
+        printf("Casa %d: Esquerda\n", contador_rainha);
+        contador_rainha++;
+    } while (contador_rainha <= casas_rainha);
+
+    printf("\n");
+
+    // ===============================
+    // MOVIMENTO DO CAVALO (for + while)
+    // ===============================
+    printf("=== MOVIMENTO DO CAVALO ===\n");
+    printf("O cavalo se moverá em 'L': %d casas para BAIXO e %d casa para a ESQUERDA.\n", mov_vertical_cavalo, mov_horizontal_cavalo);
+
+    // Primeiro movimento: 2 casas para BAIXO (loop externo for)
+    for (int i = 1; i <= mov_vertical_cavalo; i++) {
+        printf("Casa %d: Baixo\n
